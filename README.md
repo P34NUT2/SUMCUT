@@ -20,11 +20,11 @@
 
 ###
 
-<h2 align="center">code with</h2>
+<h2 align="left">code with</h2>
 
 ###
 
-<div align="center">
+<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
@@ -48,10 +48,10 @@
 
 ###
 
-<h2 align="center">Team:</h2>
+<h2 align="left">Team:</h2>
 
 ###
 
-<p align="left">-Manuel Oyamburu: Frontend and Backend (specialized in Frontend)<br><br>-Diego D'Maurice: Frontend and Artificial Intelligence<br><br>-Andoreni Flores Alcocer: Backend (specialized in Backend)<br><br>-Antonio Villafaña: Artificial Intelligence and Backend (specialized in AI)</p>
+<p align="left">-Manuel Oyamburu: Frontend and Backend (specialized in Frontend)<br>-Diego D'Maurice: Frontend and Artificial Intelligence<br>-Andoreni Flores Alcocer: Backend (specialized in Backend)<br>-Antonio Villafaña: Artificial Intelligence and Backend (specialized in AI)</p>
 
 ###
