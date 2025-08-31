@@ -47,6 +47,117 @@
 </div>
 
 ###
+<p align="left"> 
+  <h2 align="left">Tecnologías </h2>
+ • Backend: TypeScript, Node.js, Prisma ORM
+ • Base de datos: PostgreSQL
+ • Frontend: React, TypeScript
+ • IA: Python, PyTorch, TensorFlow
+ • DevOps: Docker, Bash
+
+Arquitectura Backend
+
+La implementación del backend se realiza con TypeScript y Prisma como ORM, utilizando PostgreSQL como base de datos principal. Esto permite una gestión eficiente y segura de los datos académicos generados por la plataforma.
+
+Instalación
+ 1. Clona el repositorio:git clone https://github.com/P34NUT2/SUMCUT.git
+cd SUMCUT
+
+ 2. Instala dependencias en la carpeta backend:npm install
+
+ 3. Configura la base de datos PostgreSQL en el archivo ‎`.env`.
+ 4. Ejecuta migraciones con Prisma:npx prisma migrate dev
+
+ 5. Inicia el servidor:npm run dev
+</p>
+
+###
+<h2 align="left"> Documentación : </h2>
+<p align="left"> 
+  
+- https://www.prisma.io/docs/
+- https://www.postgresql.org/docs/
+</p>
+
+###
+<h2 align="left"> Markdown </h2>
+
+<p align"left"> 
+## Uso de PostgreSQL y Prisma
+
+### Configuración inicial
+
+1. **Instala PostgreSQL**  
+   Descarga e instala PostgreSQL desde [postgresql.org](https://www.postgresql.org/download/).
+
+2. **Crea una base de datos**
+   ```bash
+   createdb sumcut
+###
+<h2 align="left"> Instala Prisma y genera la configuración </h2>
+
+```
+npm install prisma --save-dev
+npm install @prisma/client
+npx prisma init
+```
+###
+<h2 align="left"> Configura la conexión en .env </h2>
+
+###
+```
+DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/sumcut"
+```
+</p>
+
+<h2 align="left"> Modelado y migraciones </h2>
+
+```
+model Note {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+```
+  
+###
+
+<h2 align="left"> Crear y ejecutar una migración </h2>
+
+```
+npx prisma migrate dev --name init
+```
+###
+  
+<h2 align="left"> Generar el cliente Prisma </h2>
+
+```
+npx prisma generate
+```
+  
+###
+  
+<h2 align="left"> Comandos útiles de Prisma </h2>
+<p align="left"> Ver el estado de la base de datos. </p>
+
+```
+npx prisma studio
+```
+
+<p align="left"> Sincronizar modelos sin migración (SOLO DESARROLLO) </p>
+
+```
+npx prisma db push
+```
+<p align="left"> Revertir migraciones </p>
+
+```
+npx prisma migrate reset
+```
+  
+###
 
 <h2 align="left">Team:</h2>
 
