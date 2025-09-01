@@ -20,6 +20,81 @@
 
 ###
 
+<h2 align="left"> Estructura del código : </h2>
+<p align="left"> 
+
+```
+SUMCUT/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── middlewares/
+│   │   ├── utils/
+│   │   └── index.ts
+│   ├── prisma/
+│   │   ├── schema.prisma
+│   │   └── migrations/
+│   ├── tests/
+│   │   └── (archivos de pruebas unitarias e integración)
+│   ├── .env
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── README.md
+├── frontend/
+│   ├── public/
+│   │   └── (imágenes, favicon, etc.)
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/         # Next.js: páginas; React: vistas principales
+│   │   ├── hooks/
+│   │   ├── utils/
+│   │   ├── styles/
+│   │   ├── services/      # Lógica para consumir APIs
+│   │   └── App.tsx        # React; para Next.js, _app.tsx en pages/
+│   ├── tests/
+│   │   └── (archivos de pruebas unitarias e integración)
+│   ├── .env.local
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── README.md
+├── docker/
+│   ├── Dockerfile.backend
+│   ├── Dockerfile.frontend
+│   └── docker-compose.yml
+├── .gitignore
+├── README.md
+└── LICENSE
+
+```
+
+###
+
+<h2 align="left"> Explicación de diagrama </h2>
+
+<p align="left"> 
+ • backend/src/controllers/: Lógica de endpoints. <br>
+ • backend/src/routes/: Definición de rutas y endpoints. <br>
+ • backend/src/services/: Lógica de negocio y acceso a datos. <br>
+ • backend/src/middlewares/: Middlewares para autenticación, validación, etc. <br>
+ • backend/prisma/: Esquema y migraciones de la base de datos. <br>
+ • backend/tests/: Pruebas unitarias e integración del backend. <br>
+ • frontend/public/: Recursos estáticos. <br>
+ • frontend/src/components/: Componentes reutilizables. <br>
+ • frontend/src/pages/: Páginas (Next.js) o vistas principales (React). <br>
+ • frontend/src/hooks/: Custom hooks de React. <br>
+ • frontend/src/services/: Lógica para consumir APIs. <br>
+ • frontend/src/styles/: Archivos CSS/SCSS/Tailwind. <br>
+ • frontend/tests/: Pruebas unitarias e integración del frontend. <br>
+ • docker/: Archivos para contenerización y despliegue. <br>
+ • .env / .env.local: Variables de entorno. <br>
+ • README.md: Documentación principal. <br>
+ • LICENSE: Licencia del proyecto. <br>
+</p>
+
+###
+
 <h2 align="left">code with</h2>
 
 ###
@@ -49,11 +124,11 @@
 ###
 <p align="left"> 
   <h2 align="left">Tecnologías </h2>
- • Backend: TypeScript, Node.js, Prisma ORM
- • Base de datos: PostgreSQL
- • Frontend: React, TypeScript
- • IA: Python, PyTorch, TensorFlow
- • DevOps: Docker, Bash
+ • Backend: TypeScript, Node.js, Prisma ORM. <br>
+ • Base de datos: PostgreSQL. <br>
+ • Frontend: React, TypeScript. <br>
+ • IA: Python, PyTorch, TensorFlow. <br>
+ • DevOps: Docker, Bash. <br>
 
 Arquitectura Backend
 
@@ -156,7 +231,36 @@ npx prisma db push
 ```
 npx prisma migrate reset
 ```
-  
+
+###
+
+<h2 align="left" > Evitar usar los siguientes comandos si no los conocemos. </h2>
+
+```
+npx prisma migrate reset
+```
+<p align="left" >Elimina todos los datos existentes. Usarlo solo en desarrollo, nunca en producción.</p>
+
+```
+npx prisma db push --force-reset
+```
+<p align="left" >Puede causar pérdida de datos si no tiene respaldo.</p>
+
+```
+npx prisma migrate dev
+```
+<p align="left" >Está diseñado para entornos de desarrollo y puede causar incosistencias en producción.</p>
+
+```
+npx prisma migrate resolve
+```
+<p align="left" >Si se usa incorrectamente puede desincronizar el estado de migraciones y causar errores graves.</p>
+
+```
+npx prisma db seed
+```
+<p align="left" >Revisa siempre el contenido del script antes de ejecutarlo, puede ser peligroso en producción si el script de seed elimina o midifca datos.</p>
+
 ###
 
 <h2 align="left">Team:</h2>
