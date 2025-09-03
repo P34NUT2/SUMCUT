@@ -263,6 +263,28 @@ npx prisma db seed
 
 ###
 
+<h2 align="left" > Para iniciar el docker y Prisma : </h2>
+<p align="left" > 
+1. Haber instalado PostgreSQL en la computadora.
+2. Haber instalado Prisma en la computadora.
+3. En la terminal navegar a la carpeta que contenga el archivo 
+  
+``` docker-compose.yml ```
+
+4. Ejecutar el comando
+
+``` docker-compose up -d ```
+
+5. Verificar si aparecen "sumcut" dentro de docker y que estén corriendo tanto "pgadmi" como "postgres_db".
+6. Para ver Prisma ejecutar :
+
+``` npx prisma studio ```
+
+7. Para ver la DB buscar : "http://localhost:8080" en el navegador web.
+</p>
+
+###
+
 <h2 align="left">Team:</h2>
 
 ###
